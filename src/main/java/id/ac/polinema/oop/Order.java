@@ -14,7 +14,8 @@ public class Order {
     }
 
     public void addItem (MenuItem item, int quantity){
-
+        items = new OrderItem[10];
+        itemsCount++;
     }
 
     public int getItemCount(){
@@ -22,7 +23,7 @@ public class Order {
     }
 
     public double getTotal(){
-        int harga = 0;
+        double harga = 0;
         for (int i = 0; i < items.length; i++) {
             if(items[i] != null){
                 harga += items[i].getMenuItem().getPrice();

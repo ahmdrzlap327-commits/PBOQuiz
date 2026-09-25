@@ -30,11 +30,11 @@ public class Menu {
      * @param item the menu item to add
      */
     public void addMenuItem(MenuItem item) {
-        if (itemCount > 9) {
-            System.out.println("Menu sudah full");
-        }else{
+        if (itemCount < 10) {
             items[itemCount] = item;
             itemCount++;
+        }else{
+            System.out.println("Menu sudah full");
         }
     }
 
