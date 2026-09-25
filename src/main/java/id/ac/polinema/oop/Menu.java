@@ -15,12 +15,11 @@ package id.ac.polinema.oop;
  */
 public class Menu {
 
-    /**
-     * Creates an empty menu: initialize the array with capacity 10
-     * and the counter with 0.
-     */
+    private MenuItem[] items;
+    private int itemCount;
     public Menu() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        MenuItem items[] = new MenuItem[10];
+        itemCount=0;
     }
 
     /**
@@ -30,7 +29,12 @@ public class Menu {
      * @param item the menu item to add
      */
     public void addMenuItem(MenuItem item) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (itemCount > 10) {
+            System.out.println("Menu sudah full");
+        }else{
+            items[itemCount] = item;
+            itemCount++;
+        }
     }
 
     /**
@@ -40,10 +44,10 @@ public class Menu {
      * @return the matching MenuItem, or {@code null} when not found
      */
     public MenuItem findItem(String name) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        
     }
 
     public int getItemCount() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return itemCount;
     }
 }
