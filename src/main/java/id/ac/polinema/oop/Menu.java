@@ -17,8 +17,9 @@ public class Menu {
 
     private MenuItem[] items;
     private int itemCount;
+
     public Menu() {
-        MenuItem items[] = new MenuItem[10];
+        items = new MenuItem[10];
         itemCount=0;
     }
 
@@ -29,7 +30,7 @@ public class Menu {
      * @param item the menu item to add
      */
     public void addMenuItem(MenuItem item) {
-        if (itemCount > 10) {
+        if (itemCount > 9) {
             System.out.println("Menu sudah full");
         }else{
             items[itemCount] = item;

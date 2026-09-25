@@ -22,9 +22,11 @@ public class Order {
     }
 
     public double getTotal(){
-        double harga=0;
+        int harga = 0;
         for (int i = 0; i < items.length; i++) {
-            harga+=items[i].getMenuItem().getPrice();
+            if(items[i] != null){
+                harga += items[i].getMenuItem().getPrice();
+            }
         }
         return harga;
     }
