@@ -44,7 +44,12 @@ public class Menu {
      * @return the matching MenuItem, or {@code null} when not found
      */
     public MenuItem findItem(String name) {
-        
+        for (int i = 0; i < items.length; i++) {
+            if (items[i].getName().equalsIgnoreCase(name)) {
+                return items[i];
+            }
+        }
+        return null;
     }
 
     public int getItemCount() {

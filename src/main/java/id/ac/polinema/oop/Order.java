@@ -30,9 +30,9 @@ public class Order {
     }
 
     public double getFinalTotal(){
-        double final = 0;
-        if (getTotal()>10000) {
-            return 
+        if (getTotal()>100000) {
+            getTotal()*=0.9;
+            
         }
     }
 }
