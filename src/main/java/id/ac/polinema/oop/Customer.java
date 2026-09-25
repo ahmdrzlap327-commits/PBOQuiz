@@ -17,6 +17,7 @@ public class Customer {
 
     public Customer(String customerId, String name) {
         this.customerId = customerId;
+        setName(name);
     }
 
     public String getCustomerId() {
@@ -34,10 +35,10 @@ public class Customer {
      * @param name new name
      */
     public void setName(String name) {
-        if (name.equalsIgnoreCase(null) || name.equalsIgnoreCase("")) {
-            System.out.println("nama harus ada isinya tidak boleh kosong dan blank text");
-        } else {
+        if (name !=null || !name.isBlank()) {
             this.name = name;
+        } else {
+            System.out.println("nama harus ada isinya tidak boleh kosong dan blank text");
         }
     }
 }
