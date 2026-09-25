@@ -7,6 +7,8 @@ public class Order {
 
     public Order (Customer customer) {
         this.customer=customer;
+        items = new OrderItem[10];
+        itemsCount=0;
     }
 
     public Customer getCustomer(){
@@ -14,7 +16,7 @@ public class Order {
     }
 
     public void addItem (MenuItem item, int quantity){
-        items = new OrderItem[10];
+        items[itemsCount] = (new orderItem())
         itemsCount++;
     }
 
