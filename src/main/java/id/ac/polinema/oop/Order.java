@@ -30,9 +30,11 @@ public class Order {
     }
 
     public double getFinalTotal(){
-        if (getTotal()>100000) {
-            getTotal()*=0.9;
-            
+        double harga = getTotal();
+        if (harga>100000) {
+            double hargaTotal = harga * 0.9;
+            return hargaTotal;
         }
+        return harga;
     }
 }
